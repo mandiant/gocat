@@ -157,8 +157,6 @@ func (hc *Hashcat) RunJob(args ...string) (err error) {
 	}
 	defer C.hashcat_session_destroy(&hc.wrapper.ctx)
 
-	h
-
 	if hc.opts.PatchEventContext {
 		isPatchSuccessful, err := patchEventMutex(hc.wrapper.ctx)
 		if err != nil {
