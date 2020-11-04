@@ -7,7 +7,7 @@ import (
 	"testing"
 	"unsafe"
 
-	"github.com/fireeye/gocat/hcargp"
+	"github.com/fireeye/gocat/v6/hcargp"
 
 	"github.com/stretchr/testify/require"
 )
@@ -108,7 +108,7 @@ func TestGoCatCrackingMD5(t *testing.T) {
 	require.NotNil(t, hc)
 	require.NoError(t, err)
 
-	err = hc.RunJob("-a", "0", "-m", "0", "--potfile-disable", "5d41402abc4b2a76b9719d911017c592", "./testdata/test_dictionary.txt")
+	err = hc.RunJob("-O", "-a", "0", "-m", "0", "--potfile-disable", "5d41402abc4b2a76b9719d911017c592", "./testdata/test_dictionary.txt")
 	require.NoError(t, err)
 	require.Len(t, crackedHashes, 1)
 	require.Equal(t, "hello", *crackedHashes["5d41402abc4b2a76b9719d911017c592"])
@@ -125,12 +125,12 @@ func TestGoCatReusingContext(t *testing.T) {
 	require.NotNil(t, hc)
 	require.NoError(t, err)
 
-	err = hc.RunJob("-a", "0", "-m", "0", "--potfile-disable", "5d41402abc4b2a76b9719d911017c592", "./testdata/test_dictionary.txt")
+	err = hc.RunJob("-O", "-a", "0", "-m", "0", "--potfile-disable", "5d41402abc4b2a76b9719d911017c592", "./testdata/test_dictionary.txt")
 	require.NoError(t, err)
 	require.Len(t, crackedHashes, 1)
 	require.Equal(t, "hello", *crackedHashes["5d41402abc4b2a76b9719d911017c592"])
 
-	err = hc.RunJob("-a", "0", "-m", "0", "--potfile-disable", "9f9d51bc70ef21ca5c14f307980a29d8", "./testdata/test_dictionary.txt")
+	err = hc.RunJob("-O", "-a", "0", "-m", "0", "--potfile-disable", "9f9d51bc70ef21ca5c14f307980a29d8", "./testdata/test_dictionary.txt")
 	require.NoError(t, err)
 	require.Len(t, crackedHashes, 2) // the previous run will still exist in this map
 	require.Equal(t, "bob", *crackedHashes["9f9d51bc70ef21ca5c14f307980a29d8"])
@@ -148,6 +148,7 @@ func TestGoCatRunJobWithOptions(t *testing.T) {
 	require.NoError(t, err)
 
 	err = hc.RunJobWithOptions(hcargp.HashcatSessionOptions{
+		OptimizedKernelEnabled:       hcargp.GetBoolPtr(true),
 		AttackMode:                   hcargp.GetIntPtr(0),
 		HashType:                     hcargp.GetIntPtr(0),
 		PotfileDisable:               hcargp.GetBoolPtr(true),
@@ -172,6 +173,7 @@ func TestGocatRussianHashes(t *testing.T) {
 	require.NoError(t, err)
 
 	err = hc.RunJobWithOptions(hcargp.HashcatSessionOptions{
+		OptimizedKernelEnabled:       hcargp.GetBoolPtr(true),
 		AttackMode:                   hcargp.GetIntPtr(0),
 		HashType:                     hcargp.GetIntPtr(0),
 		PotfileDisable:               hcargp.GetBoolPtr(true),
@@ -225,7 +227,7 @@ func TestExampleHashcat_RunJobWithOptions(t *testing.T) {
 	}
 
 	hc, err := New(Options{
-		SharedPath: "/usr/local/share/hashcat",
+		SharedPath:     "/usr/local/share/hashcat",
 		ExecutablePath: "/usr/local/share/hashcat",
 	}, eventCallback)
 	defer hc.Free()
@@ -238,7 +240,7 @@ func TestExampleHashcat_RunJobWithOptions(t *testing.T) {
 		AttackMode:                   hcargp.GetIntPtr(0),
 		HashType:                     hcargp.GetIntPtr(0),
 		PotfileDisable:               hcargp.GetBoolPtr(true),
-		OptimizedKernelEnabled: 	  hcargp.GetBoolPtr(true),
+		OptimizedKernelEnabled:       hcargp.GetBoolPtr(true),
 		InputFile:                    "9f9d51bc70ef21ca5c14d307980a29d2",
 		DictionaryMaskDirectoryInput: hcargp.GetStringPtr("./testdata/test_dictionary.txt"),
 	})
