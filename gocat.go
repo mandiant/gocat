@@ -3,7 +3,7 @@ package gocat
 /*
 #cgo CFLAGS: -I/usr/local/include/hashcat -std=c99 -Wall -O0 -g
 #cgo linux CFLAGS: -D_GNU_SOURCE
-#cgo linux LDFLAGS: -L/usr/local/lib -lhashcat
+#cgo linux LDFLAGS: -L/usr/local/lib -lhashcat.6.1.1
 #cgo darwin LDFLAGS: -L/usr/local/lib -lhashcat.6.1.1
 
 #include "wrapper.h"
@@ -156,6 +156,8 @@ func (hc *Hashcat) RunJob(args ...string) (err error) {
 		return getErrorFromCtx(hc.wrapper.ctx)
 	}
 	defer C.hashcat_session_destroy(&hc.wrapper.ctx)
+
+	h
 
 	if hc.opts.PatchEventContext {
 		isPatchSuccessful, err := patchEventMutex(hc.wrapper.ctx)

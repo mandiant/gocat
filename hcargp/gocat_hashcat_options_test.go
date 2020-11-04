@@ -1,13 +1,14 @@
 package hcargp
 
 import (
+	"fmt"
 	"strings"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 )
 
-func ExampleHashcatSessionOptions_MarshalArgs() (string, error) {
+func ExampleHashcatSessionOptions_MarshalArgs() {
 	opts := HashcatSessionOptions{
 		AttackMode:     GetIntPtr(0),
 		HashType:       GetIntPtr(0),
@@ -18,11 +19,12 @@ func ExampleHashcatSessionOptions_MarshalArgs() (string, error) {
 
 	args, err := opts.MarshalArgs()
 	if err != nil {
-		return "", err
+		fmt.Printf("Error encoding arguments: %s\n", err.Error())
+		return
 	}
 
 	// Output: --hash-type=0 --attack-mode=0 --session=example_args_session --potfile-disable deadbeefdeadbeefdeadbeefdeadbeef
-	return strings.Join(args, " "), nil
+	fmt.Println(strings.Join(args, " "))
 }
 
 func TestInternalParseTag(t *testing.T) {
