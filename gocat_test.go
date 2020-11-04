@@ -64,7 +64,7 @@ func TestOptionsExecPath(t *testing.T) {
 
 	err := opts.validate()
 	require.Nil(t, err)
-	fmt.Println(opts.ExecutablePath)
+
 	require.True(t, strings.HasSuffix(opts.ExecutablePath, "test"))
 
 	// Not valid because executable path was incorrectly set by the user
@@ -183,8 +183,6 @@ func TestGocatRussianHashes(t *testing.T) {
 
 	require.NoError(t, err)
 	require.Len(t, crackedHashes, 4) // the previous run will still exist in this map
-	fmt.Println("HI", crackedHashes)
-	fmt.Println(crackedHashes)
 }
 
 func TestGoCatStopAtCheckpointWithNoRunningSession(t *testing.T) {
