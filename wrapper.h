@@ -11,7 +11,6 @@ typedef struct
 {
     hashcat_ctx_t ctx;
     void *gowrapper;
-    bool bValidateHashes;
 } gocat_ctx_t;
 
 void callback(u32 id, hashcat_ctx_t *hashcat_ctx, void *wrapper, void *buf, size_t len);

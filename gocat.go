@@ -102,13 +102,12 @@ type Hashcat struct {
 }
 
 // New creates a context that can be reused to crack passwords.
-func New(opts Options, cb EventCallback) (hc *Hashcat, err error) {
-	if err = opts.validate(); err != nil {
+func New(opts Options, cb EventCallback) (*Hashcat, error) {
+	if err := opts.validate(); err != nil {
 		return nil, err
 	}
 
-	fmt.Println(opts)
-	hc = &Hashcat{
+	hc := &Hashcat{
 		executablePath: C.CString(opts.ExecutablePath),
 		sharedPath:     C.CString(opts.SharedPath),
 		cb:             cb,
@@ -116,16 +115,15 @@ func New(opts Options, cb EventCallback) (hc *Hashcat, err error) {
 	}
 
 	hc.wrapper = C.gocat_ctx_t{
-		ctx:             C.hashcat_ctx_t{},
-		gowrapper:       unsafe.Pointer(hc),
-		bValidateHashes: false,
+		ctx:       C.hashcat_ctx_t{},
+		gowrapper: unsafe.Pointer(hc),
 	}
 
 	if retval := C.hashcat_init(&hc.wrapper.ctx, (*[0]byte)(unsafe.Pointer(C.event))); retval != 0 {
-		return
+		return nil, getErrorFromCtx(hc.wrapper.ctx)
 	}
 
-	return
+	return hc, nil
 }
 
 // EventCallbackIsReentrant returns a boolean indicating if hashcat_ctx.event_ctx has been patched to allow an event to fire another event
