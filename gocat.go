@@ -4,7 +4,7 @@ package gocat
 #cgo CFLAGS: -I/usr/local/include/hashcat -std=c99 -Wall -O0 -g
 #cgo linux CFLAGS: -D_GNU_SOURCE
 #cgo linux LDFLAGS: -L/usr/local/lib -lhashcat
-#cgo darwin LDFLAGS: -L/usr/local/lib -lhashcat.5.1.0
+#cgo darwin LDFLAGS: -L/usr/local/lib -lhashcat.6.1.1
 
 #include "wrapper.h"
 */
@@ -17,7 +17,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/fireeye/gocat/hcargp"
+	"github.com/fireeye/gocat/v6/hcargp"
 )
 
 var (
@@ -234,9 +234,9 @@ func callback(id uint32, hcCtx *C.hashcat_ctx_t, wrapper unsafe.Pointer, buf uns
 		payload = logHashcatAction(id, "Sorting salts...")
 	case C.EVENT_HASHLIST_SORT_SALT_POST:
 		payload = logHashcatAction(id, "Sorted salts...")
-	case C.EVENT_OPENCL_SESSION_PRE:
+	case C.EVENT_BACKEND_SESSION_PRE:
 		payload = logHashcatAction(id, "Initializing device kernels and memory")
-	case C.EVENT_OPENCL_SESSION_POST:
+	case C.EVENT_BACKEND_SESSION_POST:
 		payload = logHashcatAction(id, "Initialized device kernels and memory")
 	case C.EVENT_AUTOTUNE_STARTING:
 		payload = logHashcatAction(id, "Starting Autotune threads")

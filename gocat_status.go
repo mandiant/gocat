@@ -56,7 +56,7 @@ func (hc *Hashcat) GetStatus() *Status {
 	stats := &Status{
 		Session:               C.GoString(hcStatus.session),
 		Status:                C.GoString(hcStatus.status_string),
-		HashType:              C.GoString(hcStatus.hash_type),
+		HashType:              C.GoString(hcStatus.hash_name),
 		HashTarget:            C.GoString(hcStatus.hash_target),
 		TimeStarted:           C.GoString(hcStatus.time_started_absolute),
 		TimeEstimated:         C.GoString(hcStatus.time_estimated_absolute),
