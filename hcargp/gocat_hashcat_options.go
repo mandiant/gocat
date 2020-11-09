@@ -70,6 +70,8 @@ type HashcatSessionOptions struct {
 	RemoveCrackedHashTimer *int    `hashcat:"--remove-timer,omitempty"`
 	PotfileDisable         *bool   `hashcat:"--potfile-disable,omitempty"`
 	PotfilePath            *string `hashcat:"--potfile-path,omitempty"`
+	EncodingFrom           *string `hashcat:"--encoding-from,omitempty"`
+	EncodingTo             *string `hashcat:"--encoding-to,omitempty"`
 	DebugMode              *int    `hashcat:"--debug-mode,omitempty"`
 	DebugFile              *string `hashcat:"--debug-file,omitempty"`
 	InductionDir           *string `hashcat:"--induction-dir,omitempty"`
@@ -79,22 +81,24 @@ type HashcatSessionOptions struct {
 	TrueCryptKeyFiles      *string `hashcat:"--truecrypt-keyfiles,omitempty"`
 	VeraCryptKeyFiles      *string `hashcat:"--veracrypt-keyfiles,omitempty"`
 	VeraCryptPIM           *int    `hashcat:"--veracrypt-pim,omitempty"`
+	VeraCryptPIMStart      *int    `hashcat:"--veracrypt-pim-start,omitempty"`
+	VeraCryptPIMStop       *int    `hashcat:"--veracrypt-pim-stop,omitempty"`
 	SegmentSize            *int    `hashcat:"--segment-size,omitempty"`
 	BitmapMin              *int    `hashcat:"--bitmap-min,omitempty"`
 	BitmapMax              *int    `hashcat:"--bitmap-max,omitempty"`
 	CPUAffinity            *string `hashcat:"--cpu-affinity,omitempty"`
-	OpenCLPlatforms        *string `hashcat:"--opencl-platforms,omitempty"`
-	OpenCLDevices          *string `hashcat:"--opencl-devices,omitempty"`
+	HookThreads            *int    `hashcat:"--hook-threads,omitempty"`
+	BackendIgnoreCUDA      *bool   `hashcat:"--backend-ignore-cuda,omitempty"`
+	BackendIgnoreOpenCL    *bool   `hashcat:"--backend-ignore-opencl,omitempty"`
+	BackendDevices         *string `hashcat:"--backend-devices,omitempty"`
 	OpenCLDeviceTypes      *string `hashcat:"--opencl-device-types,omitempty"`
-	OpenCLVectorWidth      *string `hashcat:"--opencl-vector-width,omitempty"`
+	OptimizedKernelEnabled *bool   `hashcat:"--optimized-kernel-enable,omitempty"`
 	WorkloadProfile        *int    `hashcat:"--workload-profile,omitempty"`
 	KernelAccel            *int    `hashcat:"--kernel-accel,omitempty"`
 	KernelLoops            *int    `hashcat:"--kernel-loops,omitempty"`
-	NVIDIASpinDamp         *int    `hashcat:"--nvidia-spin-damp,omitempty"`
-	GPUTempDisable         *bool   `hashcat:"--gpu-temp-disable,omitempty"`
-	GPUTempAbort           *int    `hashcat:"--gpu-temp-abort,omitempty"`
-	GPUTempRetain          *int    `hashcat:"--gpu-temp-retain,omitempty"`
-	PowertuneEnable        *bool   `hashcat:"--powertune-enable,omitempty"`
+	SpinDamp               *int    `hashcat:"--spin-damp,omitempty"`
+	HWMonitorDisable       *bool   `hashcat:"--hwmon-disable,omitempty"`
+	HWMonitorTempAbort     *int    `hashcat:"--hwmon-temp-abort,omitempty"`
 	ScryptTMTO             *int    `hashcat:"--scrypt-tmto,omitempty"`
 	Skip                   *int    `hashcat:"--skip,omitempty"`
 	Limit                  *int    `hashcat:"--limit,omitempty"`
@@ -112,7 +116,6 @@ type HashcatSessionOptions struct {
 	IncrementMask          *bool   `hashcat:"--increment,omitempty"`
 	IncrementMaskMin       *int    `hashcat:"--increment-min,omitempty"`
 	IncrementMaskMax       *int    `hashcat:"--increment-max,omitempty"`
-	OptimizedKernelEnabled *bool   `hashcat:"--optimized-kernel-enable,omitempty"`
 
 	// InputFile can be a single hash or multiple hashes via a hashfile or hccapx
 	InputFile                    string  `hashcat:","`
