@@ -22,12 +22,12 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "Joomla < 2.5.18",
-		Type:    10,
+		Type:    11,
 		Example: "b78f863f2c67410c41e617f724e22f34:89384528665349271307465505333378",
 	},
 	{
 		Name:    "PostgreSQL",
-		Type:    10,
+		Type:    12,
 		Example: "93a8cf6a7d43e3b5bcd2dc6abb3e02c6:27032153220030464358344758762807",
 	},
 	{
@@ -37,17 +37,17 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "osCommerce, xt:Commerce",
-		Type:    20,
+		Type:    21,
 		Example: "e983672a03adcc9767b24584338eb378:00",
 	},
 	{
 		Name:    "Juniper NetScreen/SSG (ScreenOS)",
-		Type:    20,
+		Type:    22,
 		Example: "nKjiFErqK7TPcZdFZsZMNWPtw4Pv8n:26506173",
 	},
 	{
 		Name:    "Skype",
-		Type:    20,
+		Type:    23,
 		Example: "d04d74780881019341915c70d914db29:0675841",
 	},
 	{
@@ -77,7 +77,7 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "nsldap, SHA-1(Base64), Netscape LDAP SHA",
-		Type:    100,
+		Type:    101,
 		Example: "{SHA}uJ6qx+YUFzQbcQtyd2gpTQ5qJ3s=",
 	},
 	{
@@ -87,12 +87,12 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "nsldaps, SSHA-1(Base64), Netscape LDAP SSHA",
-		Type:    110,
+		Type:    111,
 		Example: "{SSHA}FLzWcQqyle6Mo7NvrwXCMAmRzXQxNjYxMTYzNw==",
 	},
 	{
 		Name:    "Oracle S: Type (Oracle 11+)",
-		Type:    110,
+		Type:    112,
 		Example: "63ec5f6113843f5d229e2d49c068d983a9670d02:57677783202322766743",
 	},
 	{
@@ -102,22 +102,22 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "SMF (Simple Machines Forum) > v1.1",
-		Type:    120,
+		Type:    121,
 		Example: "d27c0a627a45db487af161fcc3a4005d88eb8a1f:25551135",
 	},
 	{
 		Name:    "macOS v10.4, macOS v10.5, MacOS v10.6",
-		Type:    120,
+		Type:    122,
 		Example: "86586886b8bd3c379d2e176243a7225e6aae969d293fe9a9",
 	},
 	{
 		Name:    "Django (SHA-1)",
-		Type:    120,
+		Type:    124,
 		Example: "sha1$fe76b$02d5916550edf7fc8c886f044887f4b1abf9b013",
 	},
 	{
 		Name:    "ArubaOS",
-		Type:    120,
+		Type:    125,
 		Example: "83377286015bcebb857b23b94331e2b316b6ecbe9fbf26c4fc",
 	},
 	{
@@ -127,17 +127,17 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "MSSQL (2000)",
-		Type:    130,
+		Type:    131,
 		Example: "0x0100778883860000000000000000000000000000000000000000eda3604e067a06f2732b05b9cb90b8a710996939",
 	},
 	{
 		Name:    "MSSQL (2005)",
-		Type:    130,
+		Type:    132,
 		Example: "0x010045083578bf13a6e30ca29c40e540813772754d54a5ffd325",
 	},
 	{
 		Name:    "PeopleSoft",
-		Type:    130,
+		Type:    133,
 		Example: "uXmFVrdBvv293L9kDR3VnRmx4ZM=",
 	},
 	{
@@ -147,7 +147,7 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "Episerver 6.x < .NET 4",
-		Type:    140,
+		Type:    141,
 		Example: "$episerver$*0*MjEwNA==*ZUgAmuaYTqAvisD0A427FA3oaWU",
 	},
 	{
@@ -182,7 +182,7 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "Juniper IVE",
-		Type:    500,
+		Type:    501,
 		Example: "3u+UR6n8AgABAAAAHxxdXKmiOmUoqKnZlf8lTOhlPYy93EAkbPfs5+49YLFd/B1+omSKbW7DoqNM40/EeVnwJ8kYoXv9zy9D5C5m5A==",
 	},
 	{
@@ -222,7 +222,7 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "SSHA-256(Base64), LDAP {SSHA256}",
-		Type:    1410,
+		Type:    1411,
 		Example: "{SSHA256}L5Wk0zPY2lmoR5pH20zngq37KkxFwgTquEhx95rxfVk3Ng==",
 	},
 	{
@@ -232,7 +232,7 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "hMailServer",
-		Type:    1420,
+		Type:    1421,
 		Example: "8fe7ca27a17adc337cd892b1d959b4e487b8f0ef09e32214f44fb1b07e461c532e9ec3",
 	},
 	{
@@ -247,7 +247,7 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "Episerver 6.x >= .NET 4",
-		Type:    1440,
+		Type:    1441,
 		Example: "$episerver$*1*NDg1NTIz*8BFCg/YJBAuZs/wjbH3OWKe69BLr5Lao26ybpnD48Zk",
 	},
 	{
@@ -282,7 +282,7 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "SSHA-512(Base64), LDAP {SSHA512}",
-		Type:    1710,
+		Type:    1711,
 		Example: "{SSHA512}Bz8w5q6qEtB1Nnc8b1jfTvTXVTwohWag33oghQGOtLChnkZTw/cuJaHQlLJEI3AWKZGCRyLA6Phujdxo+is7AjA2MDcyNjY1Mg==",
 	},
 	{
@@ -292,7 +292,7 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "macOS v10.7",
-		Type:    1720,
+		Type:    1722,
 		Example: "07543781b07e905f6f947db8ae305c248b9e12f509b41097e852e2f450e824790e677ea7397b8a9a552b1c19ecf6a6e1dd3844fa5ee5db23976962859676f7d2fb85ca94",
 	},
 	{
@@ -302,7 +302,7 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "MSSQL (2012, 2014)",
-		Type:    1730,
+		Type:    1731,
 		Example: "0x02003788006711b2e74e7d8cb4be96b1d187c962c5591a02d5a6ae81b3a4a094b26b7877958b26733e45016d929a756ed30d0a5ee65d3ce1970f9b7bf946e705c595f07625b1",
 	},
 	{
@@ -357,27 +357,27 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "md5(md5($pass))",
-		Type:    2610,
+		Type:    2600,
 		Example: "a936af92b0ae20b1ff6c3347a72e5fbe",
 	},
 	{
 		Name:    "vBulletin < v3.8.5",
-		Type:    2610,
+		Type:    2611,
 		Example: "28f9975808ae2bdc5847b1cda26033ea:308",
 	},
 	{
 		Name:    "PHPS",
-		Type:    2610,
+		Type:    2612,
 		Example: "$PHPS$30353031383437363132$f02b0b2f25e5754edb04522c346ba243",
 	},
 	{
 		Name:    "vBulletin >= v3.8.5",
-		Type:    2710,
+		Type:    2711,
 		Example: "0844fbb2fdeda31884a7a45ec2010bb6:324410183853308365427804872426",
 	},
 	{
 		Name:    "MyBB 1.2+, IPB2+ (Invision Power Board)",
-		Type:    2810,
+		Type:    2811,
 		Example: "022f7e02b3314f7d0968f73c00ba759f:67588",
 	},
 	{
@@ -402,7 +402,7 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "MediaWiki B type",
-		Type:    3710,
+		Type:    3711,
 		Example: "$B$2152187716$8c8b39c3602b194eeeb6cac78eea2742",
 	},
 	{
@@ -427,7 +427,7 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "md5(strtoupper(md5($pass)))",
-		Type:    4310,
+		Type:    4300,
 		Example: "b8c385461bb9f9d733d3af832cf60b27",
 	},
 	{
@@ -447,12 +447,12 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "Redmine",
-		Type:    4520,
+		Type:    4521,
 		Example: "c18e826af2a78c7b9b7261452613233417e65817:28246535720688452723483475753333",
 	},
 	{
 		Name:    "PunBB",
-		Type:    4520,
+		Type:    4522,
 		Example: "9038129c474caa3f0de56f38db84033d0fe1d4b8:365563602032",
 	},
 	{
@@ -467,7 +467,7 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "Huawei sha1(md5($pass).$salt)",
-		Type:    4710,
+		Type:    4711,
 		Example: "53c724b7f34f09787ed3f1b316215fc35c789504:hashcat1",
 	},
 	{
@@ -512,7 +512,7 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "Cisco-IOS type 4 (SHA256)",
-		Type:    1400,
+		Type:    5700,
 		Example: "2btjjy78REtmYkkW0csHUbJZOstRXoWdX1mGrmmfeHI",
 	},
 	{
@@ -577,17 +577,17 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "TrueCrypt RIPEMD160 + XTS 512 bit + boot-mode",
-		Type:    6211,
+		Type:    6241,
 		Example: "2b5da9924119fde5270f712ba3c3e4974460416e8465f222149499908c2fca0a4753b581f26625d11c4d3f49bdeb1c95bc3e17629d7e19ffb66175e5feab90a4fd670194f95d578266f3f54e61b82dc00efc2bb4438e19c3f6d7a92825a7625d88ec6286ab4e1761749edc83dad4340fd167544f09913fd6b03775013ff232fc4dad6f726ef82ad4bd1c5227a7796d7db35a912beeda5b0cdd798bc34d3ac24403c87dc672a983687dd64f920c991840a56105a6311797eed9976014909700366420673f6455242c71151ac75903a353538ec24b4feb967e2b46886395cf3e934e83a6a58ef2c0180273a0c33ba2bd870b1d84afb03d5558dc17bc7fb586404ad9a7e506ed859540110c6ad73f0f1d2be47829bc666e1838ec3f1dc1f610206241ce07fbf2542ecef9348b37aa460815794ca582709697cbf0c90c3dae4cb9dd97b29d3c7d82bd8d0c81d708e74c7007468c6c55a40fd4f803a4f5a75818d7da0d1ef333b8622e7de516fa62a6fa2b8d6d5d23653dfcedffec771456ee204e5c85ee88defbe195462fbe8ce0e2a5a455dab66478b877ec37dfa66f19ab5201c56cd707ba7bee1b10360965d3868c1fdf91dda124b1b0994fee75848083d19369735905bd2864b496c6e35ecf96f6dd4728570a45746bcf8d7d0ec0b9b0b112b28fdc53efcfa7d0558c132cd683a742d62b34304d9f991029c8aedc3d8767da8c",
 	},
 	{
 		Name:    "TrueCrypt RIPEMD160 + XTS 1024 bit + boot-mode",
-		Type:    6212,
+		Type:    6242,
 		Example: "debcc3e74a7b2acb4c7eaa4ac86fd6431da1d9579f4f76f0b31f07b3d36e65099daca9e4ae569114b3cb6e64d707b6206a2ab6b31ab0c17b356da3719d0e2fa4058f0349763970855d4c83b02a967bb2969f1b6f3e4fdbce37c6df203efbe87bfdb5ffd8fe376e9ad61862a8f659ef0db39e06ed34c4f80aa856df2219ac6a37ebb0244445db7e412b773f4e28846c5e65129cd4f4ce76979c083f08a7c4e2be30469b8363eaf8579baa870cdcb2bdca6b60e64559cb0def242576b80722bf36eb6d94640d2937b49edf9c9af67f0172f27319448425f86831c35ae35e764b9e69fcc47a42ba7a565d682366023291b1b4cbcd1b7ba6fba75c214e5849a9ba26197f7f010f01301dcbffaa7311f2ab32c2810470d3fe873334ca578adbfd04c5a39cbd53b09755e4d868dbf8a44d76cc91031f4710b8a985c70738b443572b4745ed10e6120852870b0fdb258f0a804d679eec85b5290235c9c526165b961f17ff0fe32d9f597c8f2ab9b84f3d22fef71fec67987e687590de6ab11b33f1b06f23c38ead94c3de419061b6568612c27517b0a3395e401a2c6058fc5f41f0e084e8f2157b6486624314b1f341f74cfdec9deaed7abf89ccf97b47441493e5086f1351f42a5c0929f6431753baadcd2fb347b8835d08250743bb45aaf1c6bb30eed98e911a273074b7e8ebad2174b527b1b84e1961967bf358711346482d9db1c7",
 	},
 	{
 		Name:    "TrueCrypt RIPEMD160 + XTS 1536 bit + boot-mode",
-		Type:    6213,
+		Type:    6243,
 		Example: "5e6628907291b0b74a4f43a23fb0693acb71c4379c3a3cc0eafbab40036bbdadfede179e04484aca0f5b6ecf7c7e8abe61d6836be6590838b8f9027da93ba77d076b9a557c958159c5dcddfb70823b7e324bd99b40a8f39410f6afd279df3493b58b9ffce41b65f3afd2fc467f4553a946b85e6ffc74b91c9c38c689d98419339a84d3c6d116274e34482d546407006ee04af03b594998127b2a9716ca4278b1f3050d015af10a9bb11db0465373f3a786c148bb20473377d8e97264b1c4d7ec4179829ce929573b26e5987b59da8591e2dc8e3934830dd0b5ac521c8637e9bb31e4bc084d53bc6a8dc6875e857a4c8c32a577eed3c6cea5beef514160982be2c7d7e2f4d65efa3f4a0e11ac1860ff3160e7cd968e18019abfd0395080a9f8e860c627fc32c63c8b7ef46b203c63cf0f12c05ea65b1f83a5f1fc6ad6cc200a9527151c2b8016a38f1e87be9c960088eaaa98a01d9db8cdacaae26c446a846042a6c0248b666eea7a1be44dc3fc35ce100c3a3eb377e898deb097cfba9246685d7ec8527cdc5e1983c154169178e3d86cd4017606ccc42d25cbdea0aca2b1ac422372cfbb1ad2b7d465449a2c1fbbae35c8e7fdaadd683a7dc991b76aaba08b8706916924407392a2aef458c2e833290dc1ff116f3f49f918e6a133b60728ac7c464e4f3521784cf32866be32877534bb014312c4301d1740781221a5e8758ea4",
 	},
 	{
@@ -637,7 +637,7 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "GRUB 2",
-		Type:    7100,
+		Type:    7200,
 		Example: "grub.pbkdf2.sha512.1024.03510507805003756325721848020561235456073188241051876082416068104377357018503082587026352628170170411053726157658716047762755750.aac26b18c2b0c44bcf56514d46aabd52eea097d9c95122722087829982e9dd957b2b641cb1e015d4df16a84d0571e96cf6d3de6361431bdeed4ddb0940f2425b",
 	},
 	{
@@ -652,7 +652,7 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "MySQL $A$ (sha256crypt)",
-		Type:    7400,
+		Type:    7401,
 		Example: "$mysql$A$005*F9CC98CE08892924F50A213B6BC571A2C11778C5*625479393559393965414D45316477456B484F41316E64484742577A2E3162785353526B7554584647562F",
 	},
 	{
@@ -747,12 +747,12 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "Cisco-IOS $8$ (PBKDF2-SHA256)",
-		Type:    10900,
+		Type:    9200,
 		Example: "$8$84486783037343$pYNyVrtyMalQrZLxRi7ZLQS1Fl.jkYCgASUi5P8JNb2",
 	},
 	{
 		Name:    "Cisco-IOS $9$ (scrypt)",
-		Type:    8900,
+		Type:    9300,
 		Example: "$9$87023684531115$phio0TBQwaO7KZ8toQFyGFyDvyOzidaypRWN0uKX0hU",
 	},
 	{
@@ -807,7 +807,7 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "Django (PBKDF2-SHA256)",
-		Type:    10900,
+		Type:    10000,
 		Example: "pbkdf2_sha256$10000$1135411628$bFYX62rfJobJ07VwrUMXfuffLfj2RDM2G6/BrTrUWkE=",
 	},
 	{
@@ -817,7 +817,7 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "CRAM-MD5",
-		Type:    50,
+		Type:    10200,
 		Example: "$cram_md5$MTI=$dXNlciBiOGYwNjk5MTE0YjA1Nzg4OTIyM2RmMDg0ZjgyMjQ2Zg==",
 	},
 	{
@@ -847,7 +847,7 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "PDF 1.7 Level 3 (Acrobat 9)",
-		Type:    1410,
+		Type:    10600,
 		Example: "$pdf$5*5*256*-1028*1*16*28562274676426582441147358074521*127*a3aab04cff2c536118870976d768f1fdd445754d6b2dd81fba10bb6e742acd7f2856227467642658244114735807452100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000*127*00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000*32*0000000000000000000000000000000000000000000000000000000000000000*32*0000000000000000000000000000000000000000000000000000000000000000",
 	},
 	{
@@ -867,7 +867,7 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "RedHat 389-DS LDAP (PBKDF2-HMAC-SHA256)",
-		Type:    10900,
+		Type:    10901,
 		Example: "{PBKDF2_SHA256}AAAgADkxMjM2NTIzMzgzMjQ3MjI4MDAwNTk5OTAyOTk4NDI2MjkyMzAzNjg0NjQwOTMxNjI3OTMzNjg0MDI0OTY5NTe5ULagRTYpLaUoeqJMg8x9W/DXu+9VTFaVhaYvebYrY+sOqn1ZMRnws22C1uAkiE2tFM8qN+xw5xe7OmCPZ203NuruK4oB33QlsKIEz4ppm0TR94JB9PJx7lIQwFHD3FUNUNryj4jk6UYyJ4+V1Z9Ug/Iy/ylQBJgfs5ihzgxHYZrfp1wUCXFzlZG9mxmziPm8VFnAhaX4+FBAZvLAx33jpbKOwEg7TmwP2VJ8BNFLQRqwYdlqIjQlAhncXH+dqIF9VdM4MonAA0hx76bMvFTP7LF5VO1IqVmcuYz7YG9v4KKRjnvoUUqOj6okUBQTay3EzsdFVnUW1FemYOccJd5q",
 	},
 	{
@@ -947,12 +947,12 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "Atlassian (PBKDF2-HMAC-SHA1)",
-		Type:    12000,
+		Type:    12001,
 		Example: "{PKCS5S2}NTczNTY0NDY2NjQyNzU1Mx8gGiRGobaZYwumctGHbn2ZOHB8LkwzH+Z1gkWfy1zD",
 	},
 	{
 		Name:    "PBKDF2-HMAC-SHA512",
-		Type:    7100,
+		Type:    12100,
 		Example: "sha512:1000:NzY2:DNWohLbdIWIt4Npk9gpTvA==",
 	},
 	{
@@ -1077,17 +1077,17 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "VeraCrypt RIPEMD160 + XTS 512 bit + boot-mode",
-		Type:    13711,
+		Type:    13741,
 		Example: "528c2997054ce1d22cbc5233463df8119a0318ab94aa715e6e686c898f36690b443221a18f578fb893e0db1e4b875cc711eab542e70e13b55d6aa26134e1a8d34f5ae6caaea7390a5e2f50130e85f9e551216dd0895f4fb0bcdec219246c249236771e1f2a1f447054d363c398ab367ed7f9574eb0611211e742f429cd53b56fcdb42d2eb183c134847dc6efc7c8293d6481aa53406f0446398591956f79ca3ce76e80208fd409d0f6f14c68312fc119ab4292972338b1457c73585ae2fc863bf202f141495de50253799cbc27010fba6de6b0a36888d12f4e3964aaaf43a830097aee7d40c5e79e5e80e7b0228a67a95bb4969dd8afa0d51d6fff340f82e824547c708b5aa59274009d7d847c53a8019e73c068c6e96a4c3c6c27d0e9f4a8c3a9c52c964eebc00128e9a539f4f569606c92bfc2d4662494a1a6aca239d73399645c86bd66b8985b5bf217b29eeba0507a388aeec85fe94f6b42a1b805ecb90a08b2c8081fe51e76bc1d97f73ae10c72a9b2db694304e04807820c088f91bb97d4585493f3e6cc392a7e56a64a66b8e11b51898b4f956d1b5fe8cf55772fd6f8c0f2a2bb2d9fef05ab2bb90f251ff2e6aa0dfffeac9e045be2ec44ebc8dd4d260748e308205475dcc2cef369e869bfc1e6d7335620c694f524260770838c768346d83af7b467cdc80814d8f55a535dbac35fc278d0d1f6101db95019cee097bb",
 	},
 	{
 		Name:    "VeraCrypt RIPEMD160 + XTS 1024 bit + boot-mode",
-		Type:    13712,
+		Type:    13742,
 		Example: "a3c0fa44ec59bf7a3eed64bf70b8a60623664503eeb972eb51fa25ee921d813f8e45d3e1ab1c0088a62482bb78c6e07308d2308d3d66831505b0cb02fe214fbac8a51cf9be2ada3c46045afa7df810f2e7b57792150de63b111a9aa78d70e25d832b3d6901aa455b32da240ff68380d66da27f4f7ccc5fadc6b3ff68e27b6d5c48e6512865e3b9fbe2a64a55454cfc333d7850603ecf8e1cf19abaaf8c1581a6fa14c5091ebe70e6338081d72d6a95b542764f3865946edc8e626e166cc2e0f6260032f8decdd98f9a82aa2b065a41e9b42ce8c33d3f935706431d19888bd5b2bd4d34d9bceb8596b15994f247169ee7f8cd34b6955362b60f37a4167c7b63bab8af65e7c592e9ba4535c255b4b3d93b302aa017ea335af20f9d9696f1eb37770ca87b0245d29887cc4611a3a43d11170219c509814eb1fc122a189c08394f22309dd48a996cbfc70cf67f76b6b19e46407a12ef001b2c360501dbd63d1c9f85132204709204992078318920b32aac917bb98d8eeefb60abef47571404d069a6df7881f8e7815c18789f23561d7d33f47e1aa97fb4a60bac0332b0e742a9b0498e5641401567615fd6dbd0fcfff07aebce0d543f2c498486f15f38dcf1dd55d7144d3fc51bf1f491798b183a84f3f49a72944c8054cdab915e19dc376ae3fa681d4afcd7b13f425e96340a696a4f11929b2e769ba207c5bf2c2976a3834c499d",
 	},
 	{
 		Name:    "VeraCrypt RIPEMD160 + XTS 1536 bit + boot-mode",
-		Type:    13713,
+		Type:    13743,
 		Example: "1a8c0135fa94567aa866740cb27c5b9763c95be3ac0b7b5c744a36e48c08ae38d6d06ae5db926c64d05295cef134fb4d8eaa96a7b5673a1439f55c8ab829390ea945babc464e63f3aa33dcfed72c1bcf4051af13da96a2601a060d8c8be0343a7a4f0394b2bdd419b019bd10c3d39f0b6d9afd833816ee9ee5a8afada52db174a85ee029c46b706f8f96e937bb71569b65c2339a3ac8d831733888717fe08029013931ebed1fe932ceb16e52a5d54204e181057584d06991b8e9b16ba557d38f00e7c2be5ea864473e5e35d00a58b7ef8888c78d52ac1933011ca6c447bd16751024186657d1e314540e2c847115b70a51a23e61426ae09e646d715f807eed85e5c14ab2130da0ba86ddc40d3cdce035b454fceb969094d8d1b66e69f34e24d642dc244a81d163c395837d4cd9e2d581f4bb470ad4e5a2037068947f14676796f4adf208621c3db4629b3fec9a24edebfc37f97ea657295a2efbdd18fc44a0cc04f429d4da374db3ba2f3fc7dece70b64ac2c2a94ce5334b20b4251534f9ff3f60b1b252019d2617379bba68a4bc621cbd070881301beb0300bee243d113347d2f0a52fa79fb9fb349eba0056678618c006287e9730a0af32daa17841d88b99e25a9afcedd292a0592565f0ba533f1022ed4d6e51e64b98bab390fee3646133a0e02a5724bb14203fd50006e4be86544b62a9cb64188fbbf4ccd90a32022aa7c",
 	},
 	{
@@ -1107,17 +1107,17 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "VeraCrypt SHA256 + XTS 512 bit + boot-mode",
-		Type:    13751,
+		Type:    13761,
 		Example: "c8a5f07efc320ecd797ac2c5b911b0f7ee688f859890dd3fa39b4808eb3113219e2bf1517f46a20feba286a3f3e997c80361132262bc0dacb6e9f7088bec9f5689a0b989ad9d4cc847170422ecd3384c9ee5ccf813fa8fe8ba4d2e6a993c99032337032b83471e9e0aa2531d85481c6d66f3a0d24688e1a17b5e81b3f68736ed05279ac05bcb83bea0c813d807e8c5547f11774c93a0e9de280c1ac5b5f170c0a4b5234f7d0d35a8ec7ec69454607cd35be24428a7be1799beed0ccd6a2af49b920446ebb0cb0bebda4a86c386fcffbb61cb93894ad74819a288c6e5b2e12111011e9f149d165b91f79897f71a96bc17c2b7a5e184147a90e9289d143b597ea98797c560e91b454461d03182f1a6c0bfd2b332829f30f0f18c8253d3194aac7996d4c401a3c1de7b266962a7dd8bc0b071a357121f00bafda835584a119f8fa23306545c413856ad3b2784b8de8ce9377f180baeb0f41590eb603110ff0a82f67349711d6f1b5d707f9c655318af88530962b9127fcf3c73b4d26319a9760cd795cd5ecba203dade9e1c79af14a9e06b9b56ce0af024e6ac582bd3ced1051fb865b55b4b6eaa65789a0c31c04cc4f2fc7b458fda188907f16810f4ce6e12a264cdcb264f1c26533758b92f585a3bbc2cac84731d74e9603d1c43b321ca36b01e5724e0e5558bcba56b57c8d59ded93c12d2664350cf6a048bcfc5d62aa85c590",
 	},
 	{
 		Name:    "VeraCrypt SHA256 + XTS 1024 bit + boot-mode",
-		Type:    13752,
+		Type:    13762,
 		Example: "6bb6eef1af55eb2b2849e1fc9c90c08f705010efa6443581111216b3e145201374bb8e626e4d94a4ce7ecabb11aa57610063fceed38ca9873b0e1194bd12121d2f6b8a71994c5982049c4517ca7178a55b68cee773e06532b46d68810ede1b18783d7bca98bebf1778d14ecc18e0791190402c6a82bf3ec93e715e65997812363cc6e6bcad4f751fce16f37bbc1d6ac1d0a24c5685e85501a7c46d1cd5b04c55c605357906e5957b99230e2e9834a206e6ff48270ddf3c08c39e5c8390b2a7b7e6064719dbac29ef7513ea78c0edf420eb7ac6db684e890c5fcacfb230996f335f48f4472eaa33f3abe59943a8e3bc27ff4c24fd42015fdacd5e2eaf448049b4aa5ef1c038ca853871fc7f2573aace0874cdd1f3e01140803c1ad036b801cc1a54d619064b9b31e70e7e2601fd7b40f67814320c56721e86ddb3c62ec8cb9680ca7d2504b9decf360e32497ace8171dd9602f01db3be1541f659643e1bdc5139815acdf4debf0186707569c9b57c0fd0031ce03a5091d7937bca8f37015fa35af5f44968176164c0b9194f895a2346dacc51f5e3e7be5682ea7860c4b4302a0f22edecc7ccaebb1c824c5ca4ed4c5e674e742a1d55a7d3e732e40f0107ffad1e3876ec909fac58f1ee21ac99de2c8c29272b1df9dd7f724ff497925898506c4f6e2ae81e285239e5260b119af959338340876b5b8fdd6fede67ae37d3c750265",
 	},
 	{
 		Name:    "VeraCrypt SHA256 + XTS 1536 bit + boot-mode",
-		Type:    13753,
+		Type:    13763,
 		Example: "f95b222552195378a228d932f7df38ca459b6d812899be43944ba2e9bf47967ba35da17bf69cc3f424521983989a66fd3c7865af6dd8ac2aeb82e10c92cae66f62c89b7053d2ba18ee5adcebcf426cc7720f029f7ea5409b3b7182593afbee99f6a3828887d9da6438fafd766589c35c210de60b013d9f816f9a1c8e7e76159347611c3dba00f433aa419dcb9eaf59af6886fccd7d12ae09c2b3d7a8a6102c511e8a34b4c39df8b1938dd5fe037d7087cf2a33b5410df9a6d83d218819b32bc13999c2dd7e96eb740902699ffe5fbaa47270cf1a7e3488198495059e1520ad4ad8beec0c63827286c300555a30febfe29a359d7e364c0b52613d9cff9348152f6871b6210681ab8cfdf24b96c4793c546083197d6e5377a59d7fcab9aa679fddf550ac1ab04249d0d679e8a39ddcca26f9b8b21f7f8b71d64a0ad3d9e3ed9e2e41abd6a9b4ff4d4a7ab29c27882487909fb1118a91de8e2e2d0dea7501a63b7553fd4ff26a5f64964031c9aa3fabbc09e3f58b09ce42bbf3f05afe0f9ea18331c7ba1a887afe307fedc2be93568fe80def12e97d5e129c373814a560573ee6350f59b329352e28137aa31688c499ae1c20b25c91506c520cae56c969790204de1ba46773197fb6a72fd4742712375e89cb5ee41f3ec8b64f3322ba389c947e671b0414e981fe582898af8a5bab09e094f03cb4cab047e7547313a7d1ddba7b70",
 	},
 	{
@@ -1162,7 +1162,7 @@ var hashes = []Hash{
 	},
 	{
 		Name: "LUKS",
-		Type: 14611,
+		Type: 14600,
 	},
 	{
 		Name:    "iTunes backup < 10.0",
@@ -1191,7 +1191,7 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "Blockchain, My Wallet, V2",
-		Type:    12700,
+		Type:    15200,
 		Example: "$blockchain$v2$5000$288$324724252428471806184866704068819419467b2b32fd9593fd1a274e0b68bf2c72e5a1f5e748fd319056d1e47ca7b40767136a2d97d7133d14faaeca50986f66cdbc0faec0a3fabbd0ba5d08d5322b6b53da021aacfc439c45bec0e9fe02ad81db82f94e9bd36a7d4d76b505c2339fcd46565d3abab958fbeb1de8bfc53beb96cde8fe44128965477c9ef0762c62bbb1d66532b4888e174ea949db54374a2ed9686a63eb0b5b17ae293f7410bb4ae5106f108314a259c5fd097d558515d79350713412159103a8a174cd384a14f3da45efe18044e1146036000231f6042577d0add98fc959d265368e398dc1550b0bc693e9023cd9d51b40e701bd786e19c3a281a90465aa6ea3f9e756d430164ab2eb43be5b6796d7ac15b2fe99217410f2",
 	},
 	{
@@ -1250,18 +1250,8 @@ var hashes = []Hash{
 		Example: "{CRAM-MD5}5389b33b9725e5657cb631dc50017ff100000000000000000000000000000000",
 	},
 	{
-		Name:    "JWT (JSON Web Token) HS256",
-		Type:    16511,
-		Example: "eyJhbGciOiJIUzI1NiJ9.eyIzNDM2MzQyMCI6NTc2ODc1NDd9.f1nXZ3V_Hrr6ee-AFCTLaHRnrkiKmio2t3JqwL32guY",
-	},
-	{
-		Name:    "JWT (JSON Web Token) HS384",
-		Type:    16512,
-		Example: "eyJhbGciOiJIUzI1NiJ9.eyIzNDM2MzQyMCI6NTc2ODc1NDd9.f1nXZ3V_Hrr6ee-AFCTLaHRnrkiKmio2t3JqwL32guY",
-	},
-	{
-		Name:    "JWT (JSON Web Token) HS512",
-		Type:    16513,
+		Name:    "JWT (JSON Web Token)",
+		Type:    16500,
 		Example: "eyJhbGciOiJIUzI1NiJ9.eyIzNDM2MzQyMCI6NTc2ODc1NDd9.f1nXZ3V_Hrr6ee-AFCTLaHRnrkiKmio2t3JqwL32guY",
 	},
 	{
@@ -1271,7 +1261,7 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "FileVault 2",
-		Type:    16200,
+		Type:    16700,
 		Example: "$fvde$1$16$84286044060108438487434858307513$20000$f1620ab93192112f0a23eea89b5d4df065661f974b704191",
 	},
 	{
@@ -1461,17 +1451,17 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "Python passlib pbkdf2-sha512",
-		Type:    7100,
+		Type:    20200,
 		Example: "$pbkdf2-sha512$25000$LyWE0HrP2RsjZCxlDGFMKQ$1vC5Ohk2mCS9b6akqsEfgeb4l74SF8XjH.SljXf3dMLHdlY1GK9ojcCKts6/asR4aPqBmk74nCDddU3tvSCJvw",
 	},
 	{
 		Name:    "Python passlib pbkdf2-sha256",
-		Type:    10900,
+		Type:    20300,
 		Example: "$pbkdf2-sha256$29000$x9h7j/Ge8x6DMEao1VqrdQ$kra3R1wEnY8mPdDWOpTqOTINaAmZvRMcYd8u5OBQP9A",
 	},
 	{
 		Name:    "Python passlib pbkdf2-sha1",
-		Type:    12000,
+		Type:    20400,
 		Example: "$pbkdf2$131000$r5WythYixPgfQ2jt3buXcg$8Kdr.QQEOaZIXNOrrru36I/.6Po",
 	},
 	{
@@ -1496,7 +1486,7 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "AuthMe sha256",
-		Type:    20710,
+		Type:    20711,
 		Example: "$SHA$7218532375810603$bfede293ecf6539211a7305ea218b9f3f608953130405cda9eaba6fb6250f824",
 	},
 	{
@@ -1581,7 +1571,7 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "Telegram Mobile App Passcode (SHA256)",
-		Type:    22300,
+		Type:    22301,
 		Example: "$telegram$0*518c001aeb3b4ae96c6173be4cebe60a85f67b1e087b045935849e2f815b5e41*25184098058621950709328221838128",
 	},
 	{
@@ -1631,7 +1621,7 @@ var hashes = []Hash{
 	},
 	{
 		Name:    "Plaintext",
-		Type:    900,
+		Type:    99999,
 		Example: "hashcat",
 	},
 }

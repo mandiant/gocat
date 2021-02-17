@@ -13,6 +13,7 @@ import (
 	"path/filepath"
 	"regexp"
 	"strconv"
+	"strings"
 )
 
 var (
@@ -71,9 +72,33 @@ var knownDynamic = map[int][]customHash{
 	},
 }
 
+func checkNameModule(name string) (int, error) {
+	if !strings.HasPrefix(name, "module_") {
+		return 0, fmt.Errorf("%s does not appear to be a hashcat module", name)
+	}
+
+	// The string minus module_ prefix and .c suffix
+	mod := name[7 : len(name)-2]
+
+	// Special case for the 0 module
+	if mod == "00000" {
+		return 0, nil
+	}
+
+StripZeros:
+	for i, r := range mod {
+		if r != 0x30 {
+			mod = mod[i:]
+			break StripZeros
+		}
+	}
+
+	return strconv.Atoi(mod)
+}
+
 func main() {
 	srcPath := os.Getenv("HASHCAT_SRC_PATH")
-	if srcPath != "" {
+	if srcPath == "" {
 		log.Fatal("HASHCAT_SRC_PATH must be set to hashcat's src/modules directory to generate code")
 	}
 
@@ -113,6 +138,16 @@ func main() {
 		kernelType, err := locateKernelType(bytez)
 		if err != nil {
 			log.Fatalf("Could not locate kernel type in %s", info.Name())
+		}
+
+		kernTypeFromFn, err := checkNameModule(info.Name())
+		if err != nil {
+			log.Fatalf("Could not locate kernel type in %s", info.Name())
+		}
+
+		if kernTypeFromFn != kernelType {
+			log.Printf("WRN: Filename Contains Kernel Version %d but KERN_TYPE constant reports %d", kernTypeFromFn, kernelType)
+			kernelType = kernTypeFromFn
 		}
 
 		example := locateExample(bytez)
