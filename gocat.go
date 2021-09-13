@@ -3,8 +3,8 @@ package gocat
 /*
 #cgo CFLAGS: -I/usr/local/include/hashcat -std=c99 -Wall -O0 -g
 #cgo linux CFLAGS: -D_GNU_SOURCE
-#cgo linux LDFLAGS: -L/usr/local/lib -lhashcat.6.1.1
-#cgo darwin LDFLAGS: -L/usr/local/lib -lhashcat.6.1.1
+#cgo linux LDFLAGS: -L/usr/local/lib -lhashcat.so.6.2.4
+#cgo darwin LDFLAGS: -L/usr/local/lib -lhashcat.6.2.4
 
 #include "wrapper.h"
 */
@@ -273,7 +273,7 @@ func callback(id uint32, hcCtx *C.hashcat_ctx_t, wrapper unsafe.Pointer, buf uns
 	case C.EVENT_CRACKER_HASH_CRACKED, C.EVENT_POTFILE_HASH_SHOW:
 		// Grab the separator for this session out of user options
 		userOpts := hcCtx.user_options
-		sepr := C.GoString(&userOpts.separator)
+		sepr := C.GoString(userOpts.separator)
 		// XXX(cschmitt): What changed here that this is no longer set?
 		if sepr == "" {
 			sepr = ":"
